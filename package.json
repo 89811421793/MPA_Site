@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/89811421793/MPA_Site/issues"
   },
-  "homepage": "https://github.com/89811421793/MPA_Site#readme"
+  "homepage": "https://github.com/89811421793/MPA_Site#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.79.5"
+  }
 }
