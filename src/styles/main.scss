@@ -1,8 +1,9 @@
 /* Base */
 @import './base/base';
 @import './base/reset';
-@import './babstracts/variables';
+@import './abstracts/variables';
 @import './abstracts/mixins';
 
 /* Blocks */
-@import './blocks/*.scss';
+@import './blocks/footer';
+@import './blocks/header';
