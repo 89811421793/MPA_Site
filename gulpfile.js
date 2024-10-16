@@ -20,10 +20,12 @@ const fileInclude = require('gulp-file-include'); // Добавляем gulp-fil
 
 // Пути исходных файлов src и пути к результирующим файлам dest (константа с путями)
 const paths = {
+
   html: {
     src: "src/*.html",
     dest: "dist/",
   },
+
   styles: {
     src: [
       "src/styles/**/*.sass",
@@ -32,14 +34,22 @@ const paths = {
     ],
     dest: "dist/css/",
   },
+
   scripts: {
     src: "src/scripts/**/*.js",
     dest: "dist/js/",
   },
+
   images: {
     src: "src/img/**",
     dest: "dist/img/",
   },
+
+  svg: { 
+    src: "src/img/**/*.svg",
+    dest: "dist/img/",
+  },
+
   fonts: {
     src: "src/fonts/**/*",
     dest: "dist/fonts/",
@@ -69,7 +79,12 @@ function html() {
 function styles() {
   return gulp
     .src(paths.styles.src)
-    .pipe(plumber()) // Обработка ошибок
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err);
+        this.emit('end');
+      }
+    })) // Обработка ошибок
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer({ cascade: false }))
@@ -85,7 +100,12 @@ function styles() {
 function scripts() {
   return gulp
     .src(paths.scripts.src)
-    .pipe(plumber()) // Обработка ошибок
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err);
+        this.emit('end');
+      }
+    })) // Обработка ошибок
     .pipe(sourcemaps.init())
     .pipe(babel({ presets: ["@babel/env"] }))
     .pipe(uglify())
@@ -100,7 +120,12 @@ function scripts() {
 function img() {
   return gulp
     .src(paths.images.src)
-    .pipe(plumber()) // Обработка ошибок
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err);
+        this.emit('end');
+      }
+    })) // Обработка ошибок
     .pipe(newer(paths.images.dest))
     .pipe(imagemin({ progressive: true }))
     .pipe(size({ showFiles: true }))
@@ -110,24 +135,34 @@ function img() {
 // Обработка SVG
 function svg() {
     return gulp
-      .src('src/img/**/*.svg')
-      .pipe(plumber()) // Обработка ошибок
+      .src(paths.svg.src)
+      .pipe(plumber({
+        errorHandler: function(err) {
+          console.log(err);
+          this.emit('end');
+        }
+      })) // Обработка ошибок
       .pipe(svgmin())
-      .pipe(gulp.dest(paths.images.dest));
+      .pipe(gulp.dest(paths.svg.dest));
 }
 
 // Обработка шрифтов
 function fonts() {
     return gulp
         .src(paths.fonts.src)
-        .pipe(plumber()) // Обработка ошибок
+        .pipe(plumber({
+          errorHandler: function(err) {
+            console.log(err);
+            this.emit('end');
+          }
+        })) // Обработка ошибок
         .pipe(newer(paths.fonts.dest))
         .pipe(fontmin())
         .pipe(gulp.dest(paths.fonts.dest))
         .pipe(size({ showFiles: true }));
 }
 
-// Отслеживание изменений в файлах и запуск лайв сервера
+// Отслеживание изменений в файлах и запуск лайв сервера (режим вотчера)
 const watch = () => {
     browserSync.init({
       server: { baseDir: "./dist" }
@@ -137,6 +172,7 @@ const watch = () => {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.images.src, img);
+    gulp.watch(paths.svg.src, svg);
     gulp.watch(paths.fonts.src, fonts);
 }
 
@@ -146,9 +182,10 @@ exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.img = img;
+exports.svg = svg;
 exports.fonts = fonts; 
 exports.watch = watch;
 
 // Основной таск (который выполняется по команде gulp)
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, fonts), watch);
+const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, svg, fonts), watch);
 exports.default = build;
