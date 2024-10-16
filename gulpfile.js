@@ -16,10 +16,11 @@ const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const svgmin = require("gulp-svgmin");
 const fontmin = require("gulp-fontmin");
-const fileInclude = require("gulp-file-include"); // Добавляем gulp-file-include
+const fileInclude = require("gulp-file-include"); 
 
 // Пути исходных файлов src и пути к результирующим файлам dest (константа с путями)
 const paths = {
+
   html: {
     src: "src/pages/*.html",
     dest: "dist/",
