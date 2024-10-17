@@ -45,6 +45,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-size": "^4.0.1",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "npm-check-updates": "^17.1.3",

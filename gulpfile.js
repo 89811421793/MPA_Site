@@ -17,6 +17,7 @@ const plumber = require("gulp-plumber");
 const svgmin = require("gulp-svgmin");
 const fontmin = require("gulp-fontmin");
 const fileInclude = require("gulp-file-include"); 
+const svgsprite = require('gulp-svg-sprite');
 
 // Пути исходных файлов src и пути к результирующим файлам dest (константа с путями)
 const paths = {
@@ -156,6 +157,28 @@ function svg() {
     .pipe(gulp.dest(paths.svg.dest));
 }
 
+function sprite() {
+  return gulp .src([paths.svg.src, "!src/assets/img/logo.svg"]) 
+    .pipe(
+      plumber({
+        errorHandler: function (err) {
+          console.log(err);
+          this.emit("end");
+        },
+      })
+    ) // Обработка ошибок
+    .pipe(
+      svgsprite({
+        mode: {
+          symbol: {
+            sprite: "sprite.svg", 
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest(paths.svg.dest)); 
+}
+
 // Обработка шрифтов
 function fonts() {
   return gulp
@@ -194,13 +217,14 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.img = img;
 exports.svg = svg;
+exports.sprite = sprite;
 exports.fonts = fonts;
 exports.watch = watch;
 
 // Основной таск (который выполняется по команде gulp)
 const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, img, svg, fonts),
+  gulp.parallel(html, styles, scripts, img, fonts, svg, sprite),
   watch
 );
 exports.default = build;

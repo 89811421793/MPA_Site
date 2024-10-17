@@ -1,0 +1,57 @@
+.header {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.93) 40.86%,
+    rgba(0, 0, 0, 0.7998) 100%
+  );
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid red;
+ 
+  padding: 10px 20px; // Отступы для всего хедера
+
+  &__topbar {
+   
+    text-align: right;
+    padding-top: 22px;
+
+    a {
+      color: white;
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      max-width: 100%; // Адаптивность логотипа height: auto;
+    }
+  }
+
+  &__nav {
+   margin-top: 20px;
+   
+    .nav__list {
+      display: flex;
+      list-style: none;
+
+      &:last-child {
+        margin-right: 0;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      .nav__item {
+        margin-right: 90px;
+      }
+    }
+  }
+}

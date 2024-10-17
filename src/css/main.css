@@ -165,11 +165,50 @@ legend {
 }
 
 :root {
-  --container-width: 1260px;
   --font-main: "Raleway", sans-serif;
   --second-family: "Open Sans", sans-serif;
   --third-family: "Roboto", sans-serif;
   --font3: "Lato", sans-serif;
 }
 
-/* Blocks *//*# sourceMappingURL=main.css.map */
+/* Blocks */
+.header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.93) 40.86%, rgba(0, 0, 0, 0.7998) 100%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid red;
+  padding: 10px 20px;
+}
+.header__topbar {
+  text-align: right;
+  padding-top: 22px;
+}
+.header__topbar a {
+  color: white;
+}
+.header__row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__logo img {
+  max-width: 100%;
+}
+.header__nav {
+  margin-top: 20px;
+}
+.header__nav .nav__list {
+  display: flex;
+  list-style: none;
+}
+.header__nav .nav__list:last-child {
+  margin-right: 0;
+}
+.header__nav .nav__list:last-child a {
+  color: #fff;
+}
+.header__nav .nav__list .nav__item {
+  margin-right: 90px;
+}/*# sourceMappingURL=main.css.map */
