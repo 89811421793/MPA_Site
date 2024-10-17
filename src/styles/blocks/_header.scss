@@ -9,25 +9,40 @@
   font-size: 18px;
   line-height: 21px;
   border: 1px solid red;
-  padding: 10px 20px; 
+  padding: 10px 20px;
 
   &__topbar {
     text-align: right;
     padding-top: 22px;
-   
 
     a {
       color: white;
     }
 
-   
+    &-search-wrapper {
+      position: relative; // Устанавливаем относительное позиционирование для обертки
+      display: inline-block;
+    }
+
     &-search {
-      border: 2px solid red; 
-      color: #ff1d1d; 
+      padding-left: 30px; /* Добавьте отступ слева для текста */
+      border: 1px solid #ccc; /* Граница для поля ввода */
+      height: 36px;
 
       &:focus {
-        border-color: darkred; 
+        border-color: darkred;
       }
+    }
+
+    &-search-icon {
+      position: absolute;
+      left: 10px; /* Положение иконки внутри инпута */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px; /* Ширина иконки */
+      height: 16px; /* Высота иконки */
+      fill: #fff; /* Цвет иконки */
+      pointer-events: none; /* Иконка не должна перехватывать события клика */
     }
   }
 
@@ -39,7 +54,7 @@
 
   &__logo {
     img {
-      max-width: 100%; 
+      max-width: 100%;
     }
   }
 

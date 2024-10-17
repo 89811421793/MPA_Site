@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Base */
 @font-face {
   font-family: "Lato";
@@ -188,12 +189,27 @@ legend {
 .header__topbar a {
   color: white;
 }
+.header__topbar-search-wrapper {
+  position: relative;
+  display: inline-block;
+}
 .header__topbar-search {
-  border: 2px solid red;
-  color: #ff1d1d;
+  padding-left: 30px; /* Добавьте отступ слева для текста */
+  border: 1px solid #ccc; /* Граница для поля ввода */
+  height: 36px;
 }
 .header__topbar-search:focus {
   border-color: darkred;
+}
+.header__topbar-search-icon {
+  position: absolute;
+  left: 10px; /* Положение иконки внутри инпута */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; /* Ширина иконки */
+  height: 16px; /* Высота иконки */
+  fill: #fff; /* Цвет иконки */
+  pointer-events: none; /* Иконка не должна перехватывать события клика */
 }
 .header__row {
   display: flex;
