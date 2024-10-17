@@ -188,6 +188,13 @@ legend {
 .header__topbar a {
   color: white;
 }
+.header__topbar-search {
+  border: 2px solid red;
+  color: #ff1d1d;
+}
+.header__topbar-search:focus {
+  border-color: darkred;
+}
 .header__row {
   display: flex;
   justify-content: space-around;
