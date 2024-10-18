@@ -8,7 +8,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  border: 1px solid red;
   padding: 10px 20px;
 
   &__topbar {
@@ -20,13 +19,13 @@
     }
 
     &-search-wrapper {
-      position: relative; // Устанавливаем относительное позиционирование для обертки
+      position: relative; 
       display: inline-block;
     }
 
     &-search {
-      padding-left: 30px; /* Добавьте отступ слева для текста */
-      border: 1px solid #ccc; /* Граница для поля ввода */
+      padding-left: 30px; 
+      border: 1px solid #ccc; 
       height: 36px;
 
       &:focus {
