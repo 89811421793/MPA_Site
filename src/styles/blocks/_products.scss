@@ -1,0 +1,38 @@
+
+.products {
+    min-height: 100vh;
+    font-weight:400;
+    text-transform:uppercase;
+
+    &__title {
+        margin-top: 60px;
+        font-size: 40px;
+        line-height: 47px;
+        color: #28553F;
+    }
+    
+   
+    
+    &__viewall {
+        
+        font-size: 21px;
+        line-height: 24px;
+        color: #282A30;
+    }
+
+    &__linkwrap{
+        text-align:right;
+        margin-right: 50px;
+        margin-top: 60px;
+    }
+
+    &__gallery {
+        display: inline-block;
+        margin-top: 40px;
+        text-align: center;
+
+        img{
+            margin: 3px;
+        }
+    }
+}

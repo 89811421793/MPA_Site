@@ -349,5 +349,35 @@ legend {
 .advantages__image {
   flex: 0 0 auto;
   max-width: 400px;
-  margin: 0 160px;
+  margin: 0 190px;
+}
+
+.products {
+  min-height: 100vh;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.products__title {
+  margin-top: 60px;
+  font-size: 40px;
+  line-height: 47px;
+  color: #28553F;
+}
+.products__viewall {
+  font-size: 21px;
+  line-height: 24px;
+  color: #282A30;
+}
+.products__linkwrap {
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 60px;
+}
+.products__gallery {
+  display: inline-block;
+  margin-top: 40px;
+  text-align: center;
+}
+.products__gallery img {
+  margin: 3px;
 }/*# sourceMappingURL=main.css.map */
