@@ -380,4 +380,11 @@ legend {
 }
 .products__gallery img {
   margin: 3px;
+}
+
+.promotion {
+  min-height: 100vh;
+  background-image: url("/img/back_opaque.jpg"), linear-gradient(90deg, rgba(0, 0, 0, 0.8) 36.74%, rgba(0, 0, 0, 0.21) 100%);
+  background-size: contain;
+  background-blend-mode: overlay;
 }/*# sourceMappingURL=main.css.map */
