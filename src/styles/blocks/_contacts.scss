@@ -1,0 +1,27 @@
+.contacts {
+    min-height: 50vh;
+    background-image: url("/img/bg_sofas.png"),
+    linear-gradient(89.82deg, rgba(0, 0, 0, 0.93) 40.01%, rgba(0, 0, 0, 0.7) 66.12%, rgba(255, 255, 255, 0) 87.98%);
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding-top: 70px;
+    padding-left: 100px;
+    margin-top: 100px;
+
+    &__title{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: white;
+        margin-bottom: 30px;
+    }
+}
