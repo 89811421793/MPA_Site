@@ -455,4 +455,18 @@ legend {
 .promotion__gallery img {
   gap: 20px;
   margin: 20px;
+}
+
+.ideas {
+  min-height: 100vh;
+}
+.ideas__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  color: #282A30;
+  text-transform: uppercase;
+}
+.ideas__title .ideas__highlight {
+  color: #28553f;
 }/*# sourceMappingURL=main.css.map */
