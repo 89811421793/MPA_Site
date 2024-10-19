@@ -22,7 +22,7 @@
   
     &__infoblock {
       display: flex;
-      flex-direction: column; /* Элементы будут выровнены по колонкам */
+      flex-direction: column; 
       justify-content: center;
       max-width: 707px;
       position: absolute;
@@ -68,5 +68,18 @@
       &.btn-catalogue {
         background-color: #28553f;
       }
+    }
+
+    &__gallery{
+       position: absolute;
+        flex-wrap: wrap;
+        right:0;
+        max-width: 40%;
+        margin-top: 15px;
+    
+        img{
+            gap:20px;
+            margin: 20px;
+        }
     }
   }
