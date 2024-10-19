@@ -543,5 +543,55 @@ legend {
   font-size: 18px;
   line-height: 21px;
   color: white;
-  margin-bottom: 30px;
+}
+.contacts__form {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.contacts__form-input {
+  border: 1px solid rgba(243, 243, 243, 0.6980392157);
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-right: 20px;
+  max-width: 240px;
+}
+.contacts__form-input::-moz-placeholder {
+  color: #F3F3F3;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+.contacts__form-input::placeholder {
+  color: #F3F3F3;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+.contacts__form-btn {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  padding: 15px 80px 17px 80px;
+  border: none;
+  cursor: pointer;
+}
+.contacts__checkbox {
+  display: flex;
+  align-items: center;
+}
+.contacts__checkbox input[type=checkbox] {
+  margin-right: 10px;
+}
+.contacts__checkbox label {
+  margin-top: 20px;
+}
+.contacts__checkbox span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #F3F3F3;
 }/*# sourceMappingURL=main.css.map */
