@@ -1,7 +1,72 @@
 .promotion {
-  min-height: 100vh;
-  background-image: url("/img/back_opaque.jpg"),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.8) 36.74%, rgba(0, 0, 0, 0.21) 100%);
-  background-size: contain;
-  background-blend-mode: overlay;
-}
+    min-height: 100vh;
+    background-image: url("/img/back_opaque.jpg"),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.8) 36.74%, rgba(0, 0, 0, 0.21) 100%);
+    background-size: contain;
+    background-blend-mode: overlay;
+    padding-top: 60px;
+    padding-right: 100px;
+  
+    &__viewall {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 24px;
+      color: #FFF;
+      text-transform: uppercase;
+    }
+  
+    &__linkwrap {
+      text-align: right;
+      margin-right: 50px;
+    }
+  
+    &__infoblock {
+      display: flex;
+      flex-direction: column; /* Элементы будут выровнены по колонкам */
+      justify-content: center;
+      max-width: 707px;
+      position: absolute;
+      background-color: #000;
+      padding: 41px 17px 47px 100px;
+      z-index: 3;
+      transform: translate(0%, 40%);
+      left: -6%;
+      margin-left: 70px;
+      gap:20px;
+    }
+  
+    &__title {
+      font-weight: 500;
+      font-size: 43px;
+      line-height: 50px;
+      color: white;
+      text-transform: uppercase;
+  
+      & .promotion__highlight {
+        color: #28553f;
+      }
+    }
+  
+    &__description {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 25px;
+      color: white;
+    }
+  
+    .btn {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 17px;
+      color: white;
+      text-align: center;
+      align-self: flex-start; 
+      margin-top: 20px; 
+      padding: 21px 40px; 
+      text-transform: uppercase;
+      
+      &.btn-catalogue {
+        background-color: #28553f;
+      }
+    }
+  }
