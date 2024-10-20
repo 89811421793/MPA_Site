@@ -1,0 +1,85 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+
+    &__column {
+        flex: 1 1 22%; // Изменено на 22% для уменьшения ширины колонок margin-right: 10px; // Уменьшен отступ между колонками
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__logowrapper {
+        text-align: center;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #9c9c9c;
+    }
+
+    &__heading {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__contact {
+        color: #fff;
+        margin: 5px 0;
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        margin-top: 10px;
+
+        &__social-icon {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    &__address {
+        color: #fff;
+    }
+}

@@ -594,4 +594,74 @@ legend {
   font-size: 14px;
   line-height: 16px;
   color: #F3F3F3;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #333;
+  color: #fff;
+}
+.footer__column {
+  flex: 1 1 22%;
+}
+.footer__column:last-child {
+  margin-right: 0;
+}
+.footer__logowrapper {
+  text-align: center;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 10px;
+}
+.footer__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #9c9c9c;
+}
+.footer__heading {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__list__item {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.footer__contact {
+  color: #fff;
+  margin: 5px 0;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__socials {
+  display: flex;
+  margin-top: 10px;
+}
+.footer__socials__social-icon {
+  margin-right: 10px;
+}
+.footer__socials__social-icon:last-child {
+  margin-right: 0;
+}
+.footer__bottom {
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.footer__address {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
