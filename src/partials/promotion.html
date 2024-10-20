@@ -3,7 +3,7 @@
     <a href="#" class="promotion__viewall">Смотреть все<svg class="icon" width="24" height="24">
       <use xlink:href="img/symbol/sprite.svg#viewarrowwhite"></use>
     </svg></a>
-    
+    <div class="promotion__content">
   </div>
   <div class="promotion__infoblock">
     <h2 class="promotion__title">
@@ -18,10 +18,8 @@
       <a href="#" class="btn btn-catalogue">Перейти в каталог</a>
   </div>
   <div class="promotion__gallery">
-    @@include('../partials/components/cardpreview.html')
-    <!-- <img src="/img/product.png" alt=""> -->
-    <!-- <img src="/img/product.png" alt="">
-    <img src="/img/product.png" alt="">
-    <img src="/img/product.png" alt=""> -->
+    <!-- @@include('../partials/components/cardpreview.html') -->
+     @@loop('../partials/components/cardpreview.html','../partials/data/previewcard.json')
   </div>
+</div>
 </section>
