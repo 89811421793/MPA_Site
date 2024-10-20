@@ -605,7 +605,9 @@ legend {
   color: #fff;
 }
 .footer__column {
-  flex: 1 1 22%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .footer__column:last-child {
   margin-right: 0;
@@ -615,33 +617,34 @@ legend {
 }
 .footer__logo {
   display: block;
-  margin-bottom: 10px;
 }
 .footer__title {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #9c9c9c;
+  text-transform: uppercase;
 }
 .footer__heading {
   color: #fff;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .footer__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: #9c9c9c;
 }
 .footer__list__item {
-  color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
 }
 .footer__contact {
   color: #fff;
   margin: 5px 0;
 }
 .footer__link {
-  color: #fff;
+  color: #9c9c9c;
   text-decoration: none;
 }
 .footer__link:hover {
@@ -652,7 +655,7 @@ legend {
   margin-top: 10px;
 }
 .footer__socials__social-icon {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 .footer__socials__social-icon:last-child {
   margin-right: 0;
@@ -664,4 +667,8 @@ legend {
 }
 .footer__address {
   color: #fff;
+}
+
+.footer__column--menu {
+  margin-left: 60px;
 }/*# sourceMappingURL=main.css.map */

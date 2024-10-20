@@ -7,7 +7,9 @@
     color: #fff;
 
     &__column {
-        flex: 1 1 22%; // Изменено на 22% для уменьшения ширины колонок margin-right: 10px; // Уменьшен отступ между колонками
+        flex: 1; // Колонки будут равномерно распределены по ширине margin-right: 20px;
+        display: flex;
+        flex-direction: column;
 
         &:last-child {
             margin-right: 0;
@@ -20,7 +22,6 @@
 
     &__logo {
         display: block;
-        margin-bottom: 10px;
     }
 
     &__title {
@@ -28,21 +29,23 @@
         font-size: 14px;
         line-height: 16px;
         color: #9c9c9c;
+        text-transform: uppercase;
     }
 
     &__heading {
         color: #fff;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     &__list {
         list-style: none;
         padding: 0;
         margin: 0;
+        color: #9c9c9c;
 
         &__item {
-            color: #fff;
-            margin-bottom: 5px;
+            margin-bottom: 40px;
         }
     }
 
@@ -52,7 +55,7 @@
     }
 
     &__link {
-        color: #fff;
+        color: #9c9c9c;
         text-decoration: none;
 
         &:hover {
@@ -65,7 +68,7 @@
         margin-top: 10px;
 
         &__social-icon {
-            margin-right: 10px;
+            margin-right: 12px;
 
             &:last-child {
                 margin-right: 0;
@@ -82,4 +85,8 @@
     &__address {
         color: #fff;
     }
+}
+
+.footer__column--menu {
+    margin-left: 60px;
 }
