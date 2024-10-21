@@ -4,7 +4,11 @@
   "description": "for portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "start:404": "cross-env DEFAULT_PAGE=errorpage.html gulp",
+    "start:index": "cross-env DEFAULT_PAGE=index.html gulp",
+    "start:catalogue": "cross-env DEFAULT_PAGE=catalogue.html gulp",
+    "start:card": "cross-env DEFAULT_PAGE=card.html gulp"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,7 @@
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",
     "browser-sync": "^3.0.3",
+    "cross-env": "^7.0.3",
     "del": "^6.1.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^8.0.0",

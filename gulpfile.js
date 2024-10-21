@@ -19,6 +19,8 @@ const fontmin = require("gulp-fontmin");
 const fileInclude = require("gulp-file-include"); 
 const svgsprite = require('gulp-svg-sprite');
 
+const defaultPage = process.env.DEFAULT_PAGE || 'index.html';
+
 // Пути исходных файлов src и пути к результирующим файлам dest (константа с путями)
 const paths = {
 
@@ -65,7 +67,7 @@ function clean() {
 // Обработка HTML (с использованием gulp-file-include)
 function html() {
   return gulp
-    .src(paths.html.src)
+    .src(`src/pages/${defaultPage}`)
     .pipe(
       fileInclude({
         prefix: "@@",
@@ -200,7 +202,7 @@ function fonts() {
 // Отслеживание изменений в файлах и запуск лайв сервера (режим вотчера)
 const watch = () => {
   browserSync.init({
-    server: { baseDir: "./dist" },
+    server: { baseDir: "./dist", index: defaultPage },
   });
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.styles.src, styles);
