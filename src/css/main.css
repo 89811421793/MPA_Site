@@ -724,4 +724,21 @@ legend {
   font-weight: 400;
   line-height: 20px;
   color: white;
+}
+
+/*Other Pages Styles*/
+h1 {
+  background-color: hwb(106 31% 9%);
+}
+
+h2 {
+  background-color: lab(80% -80 50);
+}
+
+.catalogue {
+  background-color: lch(45% 120 20);
+}
+
+.danger {
+  background-color: color(display-p3 1 0 0);
 }/*# sourceMappingURL=main.css.map */
