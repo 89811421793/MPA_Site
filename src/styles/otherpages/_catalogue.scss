@@ -90,6 +90,8 @@
   &__content {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
   }
 
   &__accordion {
