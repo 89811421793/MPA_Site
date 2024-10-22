@@ -1,79 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог товаров</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
     @@include('../partials/header.html')
     <main class="catalog">
-        <h1 class="catalog__title">Изделия из <span class="catalog__subtitle">натурального камня</span></h1>
-        <hr class="catalog__divider"/>
-        <div class="catalog__controls">
-            <div class="catalog__acc">
-                <a href="/" class="catalog__link">Главная</a>
-                <span class="catalog__arrow"></span>
-                <span class="catalog__link catalog__link--highlight">Каталог товаров</span>
-            </div>
-           
-            <div class="catalog__sort">
-                <span class="catalog__sort-label">Сортировать:</span>
-                <span class="catalog__sort-option catalog__sort-option--highlight">по актуальности</span>
-                <span class="catalog__show-label">Показывать:</span>
-                <span class="catalog__show-option catalog__show-option--highlight">по 9</span>
-            </div>
-          
+      <h1 class="catalog__title">
+        Изделия из <span class="catalog__subtitle">натурального камня</span>
+      </h1>
+      <hr class="catalog__divider" />
+      <div class="catalog__controls">
+        <div class="catalog__acc">
+          <a href="/" class="catalog__link">Главная</a>
+          <span class="catalog__arrow"></span>
+          <span class="catalog__link catalog__link--highlight"
+            >Каталог товаров</span
+          >
         </div>
-        <hr class="catalog__divider"/>
-        <div class="catalog__content">
+
+        <div class="catalog__sort">
+          <span class="catalog__sort-label">Сортировать:</span>
+          <span class="catalog__sort-option catalog__sort-option--highlight"
+            >по актуальности</span
+          >
+          <span class="catalog__show-label">Показывать:</span>
+          <span class="catalog__show-option catalog__show-option--highlight"
+            >по 9</span
+          >
+        </div>
+      </div>
+      <hr class="catalog__divider" />
+      <div class="catalog__content">
         <div class="catalog__accordion">
-            <label class="catalog__accordion-item">
-                <span class="catalog__accordion-title">Вид Камня</span>
-                <svg class="icon" width="7" height="12">
-                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
-                </svg>
-            </label>
-            <label class="catalog__accordion-item">
-                <span class="catalog__accordion-title">Изделие</span>
-                <svg class="icon" width="7" height="12">
-                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
-                </svg>
-            </label>
-            <label class="catalog__accordion-item">
-                <span class="catalog__accordion-title">Месторождение</span>
-                <svg class="icon" width="7" height="12">
-                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
-                </svg>
-            </label>
-            <label class="catalog__accordion-item">
-                <span class="catalog__accordion-title">Цвет</span>
-                <svg class="icon" width="7" height="12">
-                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
-                </svg>
-            </label>
+          <label class="catalog__accordion-item">
+            <span class="catalog__accordion-title">Вид Камня</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+          
+            
+          <label class="catalog__accordion-item">
+            <span class="catalog__accordion-title">Изделие</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+          <label class="catalog__accordion-item">
+            <span class="catalog__accordion-title">Месторождение</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+          <label class="catalog__accordion-item">
+            <span class="catalog__accordion-title">Цвет</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
         </div>
         <div class="catalog__gallery">
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
-            <div class="catalog__gallery-item"><img src="/img/product.png" alt=""></div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
+          <div class="catalog__gallery-item">
+            <img src="/img/product.png" alt="" />
+          </div>
         </div>
-    </div>
-    <div class="catalog__linkwrap">
-    <a href="#" class="catalog__showmore">Показать еще<svg class="icon" width="24" height="24">
-        <use xlink:href="img/symbol/sprite.svg#viewarrowblack"></use>
-      </svg></a>
-    </div>
+      </div>
+      <div class="catalog__linkwrap">
+        <a href="#" class="catalog__showmore"
+          >Показать еще<svg class="icon" width="24" height="24">
+            <use xlink:href="img/symbol/sprite.svg#viewarrowblack"></use></svg>
+        </a>
+      </div>
     </main>
-    @@include('../partials/contacts.html')
-    @@include('../partials/footer.html')
-    
-</body>
+    @@include('../partials/contacts.html') @@include('../partials/footer.html')
+
+    <script>
+        document.querySelectorAll('.catalog__accordion-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const icon = item.querySelector('.icon');
+    icon.style.transform = icon.style.transform === 'rotate(0deg)' ? 'rotate(-90deg)' : 'rotate(0deg)';
+  });
+});
+    </script>
+  </body>
 </html>
