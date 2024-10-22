@@ -1,3 +1,4 @@
+
 .catalog {
   &__title {
     font-weight: 400;
@@ -123,6 +124,7 @@
 
         & .icon {
             flex-shrink: 0;
+            transform:rotate(-90deg);
         }
     }
 }
@@ -160,4 +162,3 @@
 }
  
 }
-

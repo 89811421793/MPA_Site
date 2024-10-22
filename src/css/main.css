@@ -834,6 +834,7 @@ legend {
 }
 .catalog__accordion .catalog__accordion-item .icon {
   flex-shrink: 0;
+  transform: rotate(-90deg);
 }
 .catalog__gallery {
   display: flex;
