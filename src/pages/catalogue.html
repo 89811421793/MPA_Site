@@ -8,11 +8,29 @@
 </head>
 <body>
     @@include('../partials/header.html')
-    <main>
-        <h1>Каталог товаров</h1>
-        <div class="catalogue"></div>
+    <main class="catalog">
+        <h1 class="catalog__title">Изделия из <span class="catalog__subtitle">натурального камня</span></h1>
+        <hr class="catalog__divider"/>
+        <div class="catalog__controls">
+            <div class="catalog__accordion">
+                <a href="/" class="catalog__link">Главная</a>
+                <span class="catalog__arrow"></span>
+                <span class="catalog__link catalog__link--highlight">Каталог товаров</span>
+            </div>
+           
+            <div class="catalog__sort">
+                <span class="catalog__sort-label">Сортировать:</span>
+                <span class="catalog__sort-option catalog__sort-option--highlight">по актуальности</span>
+                <span class="catalog__show-label">Показывать:</span>
+                <span class="catalog__show-option catalog__show-option--highlight">по 9</span>
+            </div>
+          
+        </div>
+        <hr class="catalog__divider"/>
+        <div class="catalog__items"></div>
     </main>
     @@include('../partials/contacts.html')
     @@include('../partials/footer.html')
+    
 </body>
 </html>
