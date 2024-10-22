@@ -12,7 +12,7 @@
         <h1 class="catalog__title">Изделия из <span class="catalog__subtitle">натурального камня</span></h1>
         <hr class="catalog__divider"/>
         <div class="catalog__controls">
-            <div class="catalog__accordion">
+            <div class="catalog__acc">
                 <a href="/" class="catalog__link">Главная</a>
                 <span class="catalog__arrow"></span>
                 <span class="catalog__link catalog__link--highlight">Каталог товаров</span>
@@ -27,7 +27,32 @@
           
         </div>
         <hr class="catalog__divider"/>
-        <div class="catalog__items"></div>
+        <div class="catalog__items">
+            <div class="catalog__accordion-item">
+                <span class="catalog__accordion-title">Вид Камня</span>
+                <svg class="icon" width="7" height="12">
+                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span class="catalog__accordion-title">Изделие</span>
+                <svg class="icon" width="7" height="12">
+                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span class="catalog__accordion-title">Месторождение</span>
+                <svg class="icon" width="7" height="12">
+                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span class="catalog__accordion-title">Цвет</span>
+                <svg class="icon" width="7" height="12">
+                    <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+                </svg>
+            </div>
+        </div>
     </main>
     @@include('../partials/contacts.html')
     @@include('../partials/footer.html')

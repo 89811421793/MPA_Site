@@ -30,7 +30,7 @@
     margin-bottom: 1rem;
   }
 
-  &__accordion {
+  &__acc {
     display: flex;
     align-items: center;
     margin-left: 30px;
@@ -86,4 +86,38 @@
       cursor: pointer;
     }
   }
+
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    width: 288px;
+    border: none;
+
+    & .catalog__accordion-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid #e5e5e5;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        & .catalog__accordion-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #282a30;
+            margin-right: 10px;
+        }
+
+        & .icon {
+            flex-shrink: 0;
+        }
+    }
+}
+ 
 }
