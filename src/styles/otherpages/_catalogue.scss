@@ -87,8 +87,12 @@
     }
   }
 
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
 
-  &__items {
+  &__accordion {
     display: flex;
     flex-direction: column;
     background-color: #F9F9F9;
@@ -119,5 +123,25 @@
         }
     }
 }
+
+
+&__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+  max-width: 70%;
+
+  & .catalog__gallery-item {
+  
+       margin: 10px;
+
+    & img {
+      width: 247px;
+      height: 220px;
+      display: block;
+    }
+  }
+}
  
 }
+

@@ -801,32 +801,50 @@ legend {
   margin-right: 36px;
   cursor: pointer;
 }
-.catalog__items {
+.catalog__content {
+  display: flex;
+  justify-content: center;
+}
+.catalog__accordion {
   display: flex;
   flex-direction: column;
   background-color: #F9F9F9;
   width: 288px;
   border: none;
 }
-.catalog__items .catalog__accordion-item {
+.catalog__accordion .catalog__accordion-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
   border-bottom: 1px solid #e5e5e5;
 }
-.catalog__items .catalog__accordion-item:last-child {
+.catalog__accordion .catalog__accordion-item:last-child {
   border-bottom: none;
 }
-.catalog__items .catalog__accordion-item .catalog__accordion-title {
+.catalog__accordion .catalog__accordion-item .catalog__accordion-title {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #282a30;
   margin-right: 10px;
 }
-.catalog__items .catalog__accordion-item .icon {
+.catalog__accordion .catalog__accordion-item .icon {
   flex-shrink: 0;
+}
+.catalog__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+  max-width: 70%;
+}
+.catalog__gallery .catalog__gallery-item {
+  margin: 10px;
+}
+.catalog__gallery .catalog__gallery-item img {
+  width: 247px;
+  height: 220px;
+  display: block;
 }
 
 .error-page {
