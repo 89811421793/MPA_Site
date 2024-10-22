@@ -42,7 +42,28 @@
               <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
             </svg>
           </label>
-          
+
+          <label class="catalog__accordion-subitem" style="display: none;">
+            <span class="catalog__accordion-title">Дикий камень</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+
+          <label class="catalog__accordion-subitem" style="display: none;">
+            <span class="catalog__accordion-title">Гранит</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+        
+          <label class="catalog__accordion-subitem" style="display: none;">
+            <span class="catalog__accordion-title">Мрамор</span>
+            <svg class="icon" width="7" height="12">
+              <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
+            </svg>
+          </label>
+        
             
           <label class="catalog__accordion-item">
             <span class="catalog__accordion-title">Изделие</span>
@@ -103,10 +124,21 @@
     @@include('../partials/contacts.html') @@include('../partials/footer.html')
 
     <script>
-        document.querySelectorAll('.catalog__accordion-item').forEach(item => {
+      document.querySelectorAll('.catalog__accordion-item').forEach(item => {
   item.addEventListener('click', () => {
     const icon = item.querySelector('.icon');
     icon.style.transform = icon.style.transform === 'rotate(0deg)' ? 'rotate(-90deg)' : 'rotate(0deg)';
+
+    let nextElement = item.nextElementSibling;
+
+    while (nextElement) {
+      if (nextElement.classList.contains('catalog__accordion-subitem')) {
+        nextElement.style.display = nextElement.style.display === 'none' || nextElement.style.display === '' ? 'flex' : 'none';
+      } else {
+        break;
+      }
+      nextElement = nextElement.nextElementSibling;
+    }
   });
 });
     </script>

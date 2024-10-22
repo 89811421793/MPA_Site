@@ -102,7 +102,7 @@
     width: 288px;
     border: none;
 
-    & .catalog__accordion-item {
+    & .catalog__accordion-item, & .catalog__accordion-subitem {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -125,6 +125,10 @@
             flex-shrink: 0;
             transform:rotate(-90deg);
         }
+    }
+
+    & .catalog__accordion-subitem{
+      padding-left: 30px;
     }
 
     
