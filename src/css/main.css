@@ -549,6 +549,8 @@ legend {
   padding-left: 20px;
   margin-right: 20px;
   max-width: 240px;
+  caret-color: #fff;
+  color: #FFF;
 }
 .contacts__form-input::-moz-placeholder {
   color: #F3F3F3;
@@ -727,6 +729,54 @@ legend {
 }
 
 /*Other Pages Styles*/
+.card__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 18px;
+  margin-top: 16px;
+  margin-left: 30px;
+  color: #282a30;
+  text-transform: uppercase;
+}
+.card__divider {
+  border: 1px solid #e5e5e5;
+  margin: 23px 30px;
+}
+.card__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card__acc {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.card__acc .card__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 8px;
+  color: #9c9c9c;
+}
+.card__acc .card__link--highlight {
+  color: #28553f;
+}
+.card__acc .card__arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #9c9c9c;
+  margin-right: 4px;
+}
+.card__acc .highlight {
+  color: #28553f;
+}
+
 .catalog__title {
   font-weight: 400;
   font-size: 40px;
