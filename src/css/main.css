@@ -864,6 +864,48 @@ legend {
   margin-right: 50px;
   margin-top: 60px;
 }
+.catalog__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.catalog__pagination-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28553f;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.catalog__pagination-item--prev .catalog__arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+}
+.catalog__pagination-item--next .catalog__arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+}
+.catalog__pagination-number {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #282a30;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.catalog__pagination-number:hover {
+  text-decoration: underline;
+}
 
 .error-page {
   display: flex;

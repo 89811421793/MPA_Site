@@ -63,8 +63,7 @@
               <use xlink:href="img/symbol/sprite.svg#accordarrow"></use>
             </svg>
           </label>
-        
-            
+ 
           <label class="catalog__accordion-item">
             <span class="catalog__accordion-title">Изделие</span>
             <svg class="icon" width="7" height="12">
@@ -120,6 +119,19 @@
             <use xlink:href="img/symbol/sprite.svg#viewarrowblack"></use></svg>
         </a>
       </div>
+      <div class="catalog__pagination">
+        <div class="catalog__pagination-item catalog__pagination-item--prev">
+          <div class="catalog__arrow-left"></div>
+        </div>
+        <span class="catalog__pagination-number">1</span>
+        <span class="catalog__pagination-number">2</span>
+        <span class="catalog__pagination-number">3</span>
+        <span class="catalog__pagination-number">...</span>
+        <span class="catalog__pagination-number">12</span>
+        <div class="catalog__pagination-item catalog__pagination-item--next">
+          <div class="catalog__arrow-right"></div>
+        </div>
+      </div>
     </main>
     @@include('../partials/contacts.html') @@include('../partials/footer.html')
 
@@ -150,6 +162,14 @@
           icon.style.transform = icon.style.transform === 'rotate(0deg)' ? 'rotate(-90deg)' : 'rotate(0deg)';
         });
       });
+
+      
+document.querySelectorAll('.catalog__accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const icon = item.querySelector('.icon');
+        const subItems = item.nextElementSibling;
+    });
+});
     </script>
   </body>
 </html>
