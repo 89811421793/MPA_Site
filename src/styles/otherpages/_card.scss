@@ -11,6 +11,17 @@
         text-transform: uppercase;
       }
 
+      &__recommended-heading {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 47px;
+        margin-bottom: 18px;
+        margin-top: 16px;
+        margin-left: 30px;
+        color: #282a30;
+        text-transform: uppercase;
+      }
+
       &__divider {
         border: 1px solid #e5e5e5;
         margin: 23px 30px;
@@ -77,6 +88,18 @@
                 
             }
         }
+    }
+
+    &__recommended {
+      display: flex;
+      flex-direction:column;
+      background-color: #F9F9F9;
+      padding-left: 34px;
+     
+    }
+
+    &__recommended-gallery {
+      display: flex;
     }
 }
 

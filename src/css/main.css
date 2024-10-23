@@ -675,6 +675,8 @@ legend {
 }
 .preview__picture {
   margin-bottom: 25px;
+  margin-left: 14px;
+  margin-top: 15px;
 }
 .preview__body {
   display: flex;
@@ -739,6 +741,16 @@ legend {
   color: #282a30;
   text-transform: uppercase;
 }
+.card__recommended-heading {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 18px;
+  margin-top: 16px;
+  margin-left: 30px;
+  color: #282a30;
+  text-transform: uppercase;
+}
 .card__divider {
   border: 1px solid #e5e5e5;
   margin: 23px 30px;
@@ -794,6 +806,15 @@ legend {
   font-size: 16px;
   line-height: 25px;
   color: #28553F;
+}
+.card__recommended {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+  padding-left: 34px;
+}
+.card__recommended-gallery {
+  display: flex;
 }
 
 .catalog__title {

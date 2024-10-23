@@ -28,6 +28,13 @@
         </div>
     </div>
     <hr class="card__divider">
+    <div class="card__recommended">
+<h2 class="card__recommended-heading">рекомендованные товары</h2>
+<div class="card__recommended-gallery">
+    <!-- @@include('../partials/components/cardpreview.html') -->
+     @@loop('../partials/components/cardpreview.html','../partials/data/previewcard.json')
+  </div>
+</div>
     </div>
     @@include('../partials/contacts.html')
     @@include('../partials/footer.html')
