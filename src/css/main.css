@@ -807,6 +807,27 @@ legend {
   line-height: 25px;
   color: #28553F;
 }
+.card__description-box {
+  margin-left: 28px;
+}
+.card__description-heading {
+  display: flex;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 25px;
+}
+.card__description-heading h3 {
+  padding-bottom: 3px;
+}
+.card__description-arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid;
+  margin-left: 5px;
+  margin-top: 9px;
+}
 .card__recommended {
   display: flex;
   flex-direction: column;

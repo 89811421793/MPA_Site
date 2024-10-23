@@ -8,35 +8,86 @@
 </head>
 <body>
     @@include('../partials/header.html')
-  <div class="cardwrapper">
-    <hr class="card__divider"/>
-    <div class="card__controls">
-        <div class="card__acc">
-          <a href="/" class="card__link">Главная</a>
-          <span class="card__arrow"></span>
-          <span class="card__link card__link--highlight">Каталог товаров</span>
-          <span class="card__arrow"></span>
-          <span class="card__link card__link--highlight">Ваза из гранита</span>
-          </div>
-    </div>
-    <hr class="card__divider"/>
-    <div class="card__header">
-        <h1 class="card__title">ВАЗА ИЗ ГРАНИТА «КАПУСТЯНСКОЕ»</h1>
-        <div class="card__info">
-            <span class="card__model">Модель: <span style="color:#9C9C9C">183260098</span></span>
-            <span class="card__article">Артикул: <span style="color: #9C9C9C">183260098</span>
+    <div class="cardwrapper">
+        <hr class="card__divider"/>
+        <div class="card__controls">
+            <div class="card__acc">
+                <a href="/" class="card__link">Главная</a>
+                <span class="card__arrow"></span>
+                <span class="card__link card__link--highlight">Каталог товаров</span>
+                <span class="card__arrow"></span>
+                <span class="card__link card__link--highlight">Ваза из гранита</span>
+            </div>
         </div>
-    </div>
-    <hr class="card__divider">
-    <div class="card__recommended">
-<h2 class="card__recommended-heading">рекомендованные товары</h2>
-<div class="card__recommended-gallery">
-    <!-- @@include('../partials/components/cardpreview.html') -->
-     @@loop('../partials/components/cardpreview.html','../partials/data/previewcard.json')
-  </div>
-</div>
+        <hr class="card__divider"/>
+        <div class="card__header">
+            <h1 class="card__title">ВАЗА ИЗ ГРАНИТА «КАПУСТЯНСКОЕ»</h1>
+            <div class="card__info">
+                <span class="card__model">Модель: <span class="card__model-value">183260098</span></span>
+                <span class="card__article">Артикул: <span class="card__article-value">183260098</span></span>
+            </div>
+        </div>
+        <hr class="card__divider">
+   
+
+
+
+
+       <div class="card__description-box">
+            <label class="card__description-heading">
+                <h3>Описание</h3>
+                <span class="card__description-arrow"></span>
+            </label>
+            <hr class="card__divider">
+            <p class="card__description-dropdown" style="display:none;">Меценат лаореет великая жизнь свершилась, надо вестибюль чистый поставить. Mauris sollicitudin congue nisl, congue pellentesque Fear pellentesque id. Клиент очень важен, за клиентом последует клиент. Говорят, что некоторым разработчикам всегда нужен эрос. Mauris eros felis, иногда входит в состав sollicitudin lobortis mauris. Иногда разумно сделать массу солярки и не запускать ее. 
+                Но масса фегиата на выходных. Двум игрокам не нужно было играть в футбол и просто так. Для какого-то автора, чем К сожалению, даже грузовиков озера. Часть программного обеспечения предоставляется бесплатно. Упомянутый дом льстит луку заботы о жизни. Теперь жизнь долины ожидается. Morbi sem terus, ultricies need шоколадный язычок, ultricies lorem.</p>
+        </div> 
+
+
+     <hr class="card__divider">
+
+        <div class="card__recommended">
+            <h2 class="card__recommended-heading">рекомендованные товары</h2>
+            <div class="card__recommended-gallery">
+                @@loop('../partials/components/cardpreview.html','../partials/data/previewcard.json')
+            </div>
+        </div>
     </div>
     @@include('../partials/contacts.html')
     @@include('../partials/footer.html')
+
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+            const descriptionHeading = document.querySelector('.card__description-heading');
+            const descriptionDropdown = document.querySelector('.card__description-dropdown');
+            const descriptionArrow = document.querySelector('.card__description-arrow');
+
+            let isVisible = false;
+
+            descriptionHeading.addEventListener('click', function() {
+                isVisible = !isVisible;
+
+                if (isVisible) {
+                    descriptionDropdown.style.display = 'block';
+                    descriptionArrow.style.width = '0';
+                    descriptionArrow.style.height = '0';
+                    descriptionArrow.style.borderLeft = '5px solid transparent';
+                    descriptionArrow.style.borderRight = '5px solid transparent';
+                    descriptionArrow.style.borderTop = '5px solid';
+                    descriptionArrow.style.marginTop = '13px';
+
+                } else {
+                    descriptionDropdown.style.display = 'none';
+                    descriptionArrow.style.width = '0';
+                    descriptionArrow.style.height = '0';
+                    descriptionArrow.style.borderTop = '5px solid transparent';
+                    descriptionArrow.style.borderBottom = '5px solid transparent';
+                    descriptionArrow.style.borderLeft = '5px solid';
+                    descriptionArrow.style.marginLeft = '5px';
+                    descriptionArrow.style.marginTop = '9px';
+                }
+            });
+        });
+</script>
 </body>
 </html>
