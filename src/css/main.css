@@ -805,7 +805,7 @@ legend {
   font-weight: 500;
   font-size: 16px;
   line-height: 25px;
-  color: #28553F;
+  color: #28553f;
 }
 .card__description-box {
   margin-left: 28px;
@@ -828,10 +828,16 @@ legend {
   margin-left: 5px;
   margin-top: 9px;
 }
+.card__description-dropdown {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 1131px;
+}
 .card__recommended {
   display: flex;
   flex-direction: column;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   padding-left: 34px;
 }
 .card__recommended-gallery {
