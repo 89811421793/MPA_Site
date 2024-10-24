@@ -38,7 +38,7 @@
           <span class="card__description-arrow"></span>
         </label>
         <hr class="card__divider" />
-        <p class="card__description-dropdown">
+        <p class="card__description-dropdown" style="display: none">
           Меценат лаореет великая жизнь свершилась, надо вестибюль чистый
           поставить. Mauris sollicitudin congue nisl, congue pellentesque Fear
           pellentesque id. Клиент очень важен, за клиентом последует клиент.
@@ -52,7 +52,53 @@
           terus, ultricies need шоколадный язычок, ultricies lorem.
         </p>
       </div>
+
+      <div class="card__tabs">
+
+        <div class="card__tabs-item">
+          <div class="card__tabs-title">
+            <svg class="icon" width="17" height="17">
+              <use xlink:href="img/symbol/sprite.svg#OK"></use>
+            </svg>
+            <span class="card__tabs-title">Оплата</span>
+          </div>
+          <p class="card__tabs-desc">
+            Возможны любые виды оплаты. Безналичный расчет для юридических и физических лиц.
+          </p>
+        </div>
+
+        <div class="card__tabs-item">
+          <div class="card__tabs-title">
+          <svg class="icon" width="17" height="17">
+            <use xlink:href="img/symbol/sprite.svg#OK"></use>
+          </svg>
+          <span class="card__tabs-title">Доставка</span>
+          </div>
+          <p class="card__tabs-desc">
+            Стоимость доставки зависит от месторождения камня и соответствует
+            действующим тарифам на грузоперевозки авто и ж/д транспорта.
+            Уточняйте у менеджеров.
+          </p>
+        </div>
+
+        <div class="card__tabs-item">
+          <div class="card__tabs-title">
+          <svg class="icon" width="17" height="17">
+            <use xlink:href="img/symbol/sprite.svg#OK"></use>
+          </svg>
+          <span class="card__tabs-title">Гарантия качества</span>
+          </div>
+          <p class="card__tabs-desc">
+            Вся гарантийная продукция соответствует ГОСТам
+            32018-2012,23342-2012,9480-2012. Это характеризует наш гранит как
+            продукцию высочайшего качества.
+          </p>
+        </div>
+      </div>
       <hr class="card__divider" />
+     
+
+
       <div class="card__recommended">
         <h2 class="card__recommended-heading">рекомендованные товары</h2>
         <div class="card__recommended-gallery">
@@ -74,7 +120,7 @@
           ".card__description-arrow"
         );
 
-        let isVisible = true;
+        let isVisible = false;
 
         descriptionHeading.addEventListener("click", function () {
           isVisible = !isVisible;
@@ -87,7 +133,6 @@
             descriptionArrow.style.borderRight = "5px solid transparent";
             descriptionArrow.style.borderTop = "5px solid";
             descriptionArrow.style.marginTop = "13px";
-
           } else {
             descriptionDropdown.style.display = "none";
             descriptionArrow.style.width = "0";

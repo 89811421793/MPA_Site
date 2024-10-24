@@ -807,6 +807,28 @@ legend {
   line-height: 25px;
   color: #28553f;
 }
+.card__tabs {
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  gap: 30px;
+}
+.card__tabs-item {
+  flex: 1;
+}
+.card__tabs-item .card__tabs-desc {
+  margin-top: 50px;
+}
+.card__tabs-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 25px;
+}
+.card__tabs-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
 .card__description-box {
   margin-left: 28px;
 }
@@ -833,6 +855,7 @@ legend {
   font-size: 16px;
   line-height: 30px;
   max-width: 1131px;
+  margin-bottom: 60px;
 }
 .card__recommended {
   display: flex;
