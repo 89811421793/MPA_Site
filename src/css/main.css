@@ -730,6 +730,25 @@ legend {
   color: white;
 }
 
+.swiper {
+  width: 603px;
+  height: 100%;
+}
+
+.swiper-slide {
+  margin-right: 10px;
+}
+
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}
 /*Other Pages Styles*/
 .card__title {
   font-weight: 400;

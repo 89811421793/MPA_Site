@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="js/main.min.js"></script>
   </head>
   <body>
     @@include('../partials/header.html')
@@ -24,14 +26,36 @@
         <h1 class="card__title">ВАЗА ИЗ ГРАНИТА «КАПУСТЯНСКОЕ»</h1>
         <div class="card__info">
           <span class="card__model"
-            >Модель: <span class="card__model-value">183260098</span></span
-          >
-          <span class="card__article"
-            >Артикул: <span class="card__article-value">183260098</span></span
-          >
+            >Модель: <span class="card__model-value">183260098</span></span>
+          <span class="card__article">Артикул: <span class="card__article-value">183260098</span></span>
         </div>
       </div>
       <hr class="card__divider" />
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+    
       <div class="card__description-box">
         <label class="card__description-heading">
           <h3>Описание</h3>
@@ -95,10 +119,6 @@
           </p>
         </div>
       </div>
-     
-     
-
-
       <div class="card__recommended">
         <h2 class="card__recommended-heading">рекомендованные товары</h2>
         <div class="card__recommended-gallery">
@@ -108,43 +128,29 @@
     </div>
     @@include('../partials/contacts.html') @@include('../partials/footer.html')
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const descriptionHeading = document.querySelector(
-          ".card__description-heading"
-        );
-        const descriptionDropdown = document.querySelector(
-          ".card__description-dropdown"
-        );
-        const descriptionArrow = document.querySelector(
-          ".card__description-arrow"
-        );
+        const swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
 
-        let isVisible = false;
+  function getDirection() {
+    let windowWidth = window.innerWidth;
+    let direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
-        descriptionHeading.addEventListener("click", function () {
-          isVisible = !isVisible;
-
-          if (isVisible) {
-            descriptionDropdown.style.display = "block";
-            descriptionArrow.style.width = "0";
-            descriptionArrow.style.height = "0";
-            descriptionArrow.style.borderLeft = "5px solid transparent";
-            descriptionArrow.style.borderRight = "5px solid transparent";
-            descriptionArrow.style.borderTop = "5px solid";
-            descriptionArrow.style.marginTop = "13px";
-          } else {
-            descriptionDropdown.style.display = "none";
-            descriptionArrow.style.width = "0";
-            descriptionArrow.style.height = "0";
-            descriptionArrow.style.borderTop = "5px solid transparent";
-            descriptionArrow.style.borderBottom = "5px solid transparent";
-            descriptionArrow.style.borderLeft = "5px solid";
-            descriptionArrow.style.marginLeft = "5px";
-            descriptionArrow.style.marginTop = "9px";
-          }
-        });
-      });
+    return direction;
+  }
     </script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
