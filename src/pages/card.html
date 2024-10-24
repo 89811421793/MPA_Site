@@ -31,6 +31,9 @@
         </div>
       </div>
       <hr class="card__divider" />
+
+     <div class="card__sliderbox">
+      <div class="swiper-button-prev"></div>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -52,9 +55,10 @@
               <img src="/img/bathroom_small.png" alt="" width="117" height="103" />
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
+        <div class="swiper-button-next"></div>
+      </div>
+  
     
       <div class="card__description-box">
         <label class="card__description-heading">
@@ -132,6 +136,7 @@
     <script>
         const swiper = new Swiper('.swiper', {
     slidesPerView: 4,
+    spaceBetween: 15,
     direction: getDirection(),
     navigation: {
       nextEl: '.swiper-button-next',

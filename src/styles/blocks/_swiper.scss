@@ -1,15 +1,32 @@
 
 
   .swiper {
-    width: 603px;
+    width: 510px !important;
     height: 100%;
+   
 
   }
 
 
   .swiper-slide {
-    margin-right:10px;
+    margin-right:15px !important;
+    width: 117px !important;
   }
+
+  .swiper-button-next,
+.swiper-button-prev {
+border:1px solid;
+
+}
+ 
+
+.swiper-button-next {
+  right: 30% !important;
+}
+
+.swiper-button-prev {
+  left: 30% !important;
+}
 
 
   @media (max-width: 760px) {
@@ -23,3 +40,4 @@
       transform: rotate(90deg);
     }
   }
+
