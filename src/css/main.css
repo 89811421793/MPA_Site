@@ -812,6 +812,16 @@ legend {
   margin-left: 30px;
   margin-right: 30px;
   gap: 30px;
+  position: relative;
+}
+.card__tabs::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  border: 1px solid #e5e5e5;
+  z-index: 1;
 }
 .card__tabs-item {
   flex: 1;
@@ -862,6 +872,7 @@ legend {
   flex-direction: column;
   background-color: #f9f9f9;
   padding-left: 34px;
+  margin-top: 100px;
 }
 .card__recommended-gallery {
   display: flex;
