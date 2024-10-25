@@ -755,7 +755,7 @@ legend {
 }
 
 .swiper-button-next {
-  right: 1% !important;
+  right: 0 !important;
 }
 
 .swiper-button-prev {
@@ -849,6 +849,10 @@ legend {
   line-height: 25px;
   color: #28553f;
 }
+.card__available {
+  display: flex;
+  gap: 38px;
+}
 .card__actionblock {
   display: flex;
   flex-direction: column;
@@ -857,6 +861,13 @@ legend {
 .card__sliderbox {
   position: relative;
   max-width: 610px;
+}
+.card__available-info span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #28553F;
+  margin-left: 8px;
 }
 .card__tabs {
   display: flex;
@@ -892,6 +903,7 @@ legend {
 }
 .card__description-box {
   margin-left: 28px;
+  margin-top: 75px;
 }
 .card__description-heading {
   display: flex;
