@@ -71,7 +71,24 @@
         <use xlink:href="img/symbol/sprite.svg#Available"></use>
       </svg>
       <span>В наличии</span>
+      <div class="available-info-price">
+        <span>1 630 000 ₽</span>
+        <span><s>1 930 000 ₽</s></span>
+        <span>-50%</span>
+        <p>Цена указана с учетом НДС</p>
+        <div class="card__quantity-selector">
+          <div class="card__quantity-label">Количество:</div>
+          <div class="card__quantity-container">
+            <span class="card__quantity-value">0</span>
+            <div class="card__quantity-button-wrapper">
+            <button class="card__quantity-button card__quantity-button--increment"> <span class="triangle-up"></span></button>
+            <button class="card__quantity-button card__quantity-button--decrement"><span class="triangle-down"></span></button>
+           </div>
+          </div>
+        </div>
+      </div>
     </div>
+    
   </div>
   
     
@@ -172,5 +189,24 @@
   }
     </script>
     <script src="js/main.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const decrementButton = document.querySelector('.card__quantity-button--decrement');
+  const incrementButton = document.querySelector('.card__quantity-button--increment');
+  const quantityValue = document.querySelector('.card__quantity-value');
+
+  decrementButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityValue.textContent, 10);
+    if (currentValue > 0) {
+      quantityValue.textContent = currentValue - 1;
+    }
+  });
+
+  incrementButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityValue.textContent, 10);
+    quantityValue.textContent = currentValue + 1;
+  });
+});
+    </script>
   </body>
 </html>
