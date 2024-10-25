@@ -905,6 +905,7 @@ legend {
   display: flex;
   align-items: center;
   margin-top: 35px;
+  margin-bottom: 30px;
 }
 .card__available-info .card__quantity-selector .card__quantity-button-wrapper {
   align-self: center;
@@ -965,6 +966,26 @@ legend {
   display: flex;
   border: 1px solid #d7dadd;
   padding: 12px 19px 12px 16px;
+}
+.card__characteristics-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+.card__characteristics-heading h3 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #282A30;
+}
+.card__characteristics-show {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid;
+  color: #28553F;
 }
 .card__tabs {
   display: flex;
