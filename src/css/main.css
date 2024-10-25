@@ -741,7 +741,17 @@ legend {
 
 .swiper-button-next,
 .swiper-button-prev {
-  border: 1px solid;
+  border: 1px solid #f9f9f9;
+  height: 103px !important;
+  width: 27px !important;
+  background-color: #f9f9f9;
+  transform: translateY(-29%);
+  position: relative;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
 }
 
 .swiper-button-next {

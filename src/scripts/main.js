@@ -63,3 +63,40 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+
+
+  document.querySelectorAll('.catalog__accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const icon = item.querySelector('.icon');
+      icon.style.transform = icon.style.transform === 'rotate(0deg)' ? 'rotate(-90deg)' : 'rotate(0deg)';
+
+      if (item.classList.contains('catalog__accordion-subitem')) return;
+
+      let nextElement = item.nextElementSibling;
+
+      while (nextElement) {
+        if (nextElement.classList.contains('catalog__accordion-subitem')) {
+          nextElement.style.display = nextElement.style.display === 'none' || nextElement.style.display === '' ? 'flex' : 'none';
+        } else {
+          break;
+        }
+        nextElement = nextElement.nextElementSibling;
+      }
+    });
+  });
+
+  document.querySelectorAll('.catalog__accordion-subitem').forEach(subitem => {
+    subitem.addEventListener('click', () => {
+      const icon = subitem.querySelector('.icon');
+      icon.style.transform = icon.style.transform === 'rotate(0deg)' ? 'rotate(-90deg)' : 'rotate(0deg)';
+    });
+  });
+
+  
+document.querySelectorAll('.catalog__accordion-item').forEach(item => {
+item.addEventListener('click', () => {
+    const icon = item.querySelector('.icon');
+    const subItems = item.nextElementSibling;
+});
+});
