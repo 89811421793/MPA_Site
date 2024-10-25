@@ -951,9 +951,12 @@ legend {
   margin-top: 5px;
 }
 .card__available-info .card__quantity-selector .card__quantity-value {
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 31px;
   margin-right: 17px;
   align-self: center;
+  color: #424551;
 }
 .card__available-info .card__quantity-selector .card__quantity-label {
   font-weight: 400;
