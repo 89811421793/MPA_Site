@@ -866,8 +866,40 @@ legend {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #28553F;
-  margin-left: 8px;
+  color: #28553f;
+}
+.card__available-info-price {
+  margin-top: 35px;
+  margin-bottom: 7px;
+}
+.card__available-info-price .card__price-current {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  margin-right: 14px;
+}
+.card__available-info-price .card__price-old {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 27px;
+  color: #9c9c9c;
+  text-decoration: line-through;
+  margin-right: 16px;
+}
+.card__available-info-price .card__discount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: white;
+  border: none;
+  background-color: #28553f;
+  padding: 8px 15px 8px 17px;
+}
+.card__available-info .card__price-note {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #9c9c9c;
 }
 .card__available-info .card__quantity-selector {
   display: flex;
@@ -923,12 +955,15 @@ legend {
   align-self: center;
 }
 .card__available-info .card__quantity-selector .card__quantity-label {
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #282a30;
   margin-right: 23px;
 }
 .card__available-info .card__quantity-selector .card__quantity-container {
   display: flex;
-  border: 1px solid #D7DADD;
+  border: 1px solid #d7dadd;
   padding: 12px 19px 12px 16px;
 }
 .card__tabs {
