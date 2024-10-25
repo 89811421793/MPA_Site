@@ -88,8 +88,15 @@
     }
   }
 
+  &__actionblock {
+    display:flex;
+    flex-direction:column;
+    margin-left: 30px;
+  }
+
   &__sliderbox {
     position: relative;
+    max-width:610px;
   }
 
 

@@ -13,10 +13,9 @@
   height: 103px !important;
   width: 27px !important;
   background-color: #f9f9f9;
-  transform: translateY(-29%);
+  transform: translateY(-27%);
   position: relative;
 }
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -24,11 +23,11 @@
 }
 
 .swiper-button-next {
-  right: 30% !important;
+  right: 1% !important;
 }
 
 .swiper-button-prev {
-  left: 30% !important;
+  left: 0 !important;
 }
 
 @media (max-width: 760px) {
