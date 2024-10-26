@@ -146,7 +146,7 @@
           <h3>Характеристики</h3>
           <span class="card__characteristics-show"></span>
           </label>
-          <div class="card__characteristics-box-list">
+          <div class="card__characteristics-box-list" style="display:none;">
           <div class="card__characteristics-box-item">
             <span class="card__characteristics-box-label">Вид камня</span>
             <span class="card__characteristics-box-value">600x2000, 700x2000, 800x2000, 900x2000 мм</span>  
@@ -290,6 +290,25 @@
           quantityValue.textContent = currentValue + 1;
         });
       });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const characteristicsLabel = document.querySelector(".card__characteristics-heading");
+  const characteristicsList = document.querySelector(".card__characteristics-box-list");
+  const characteristicsShow = document.querySelector(".card__characteristics-show");
+
+  characteristicsLabel.addEventListener("click", () => {
+   
+    if (characteristicsList.style.display === "none") {
+      characteristicsList.style.display = "flex"; 
+      characteristicsShow.classList.add("active"); 
+    } else {
+      characteristicsList.style.display = "none"; 
+      characteristicsShow.classList.remove("active"); 
+    }
+  });
+});
+
     </script>
   </body>
 </html>

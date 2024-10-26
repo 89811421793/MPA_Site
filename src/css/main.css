@@ -1015,6 +1015,13 @@ legend {
   border-left: 5px solid;
   color: #28553F;
 }
+.card__characteristics-show.active {
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+}
 .card__characteristics-box-list {
   display: flex;
   flex-direction: column;
