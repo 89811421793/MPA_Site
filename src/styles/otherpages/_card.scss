@@ -102,6 +102,7 @@
   &__sliderbox {
     position: relative;
     max-width: 610px;
+    margin-top: 23px;
   }
 
   &__available-info {
@@ -256,6 +257,39 @@
     border-bottom: 5px solid transparent;
     border-left: 5px solid ; 
     color:#28553F; 
+  }
+
+
+  &__characteristics-box {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 10px;
+    }
+  
+    &-label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #282A30;
+      width: 150px;
+    }
+  
+    &-value {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #424551;
+      width: calc(100% - 194px); 
+    }
   }
 
  

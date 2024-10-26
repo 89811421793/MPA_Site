@@ -861,6 +861,7 @@ legend {
 .card__sliderbox {
   position: relative;
   max-width: 610px;
+  margin-top: 23px;
 }
 .card__available-info span {
   font-weight: 600;
@@ -989,6 +990,32 @@ legend {
   border-bottom: 5px solid transparent;
   border-left: 5px solid;
   color: #28553F;
+}
+.card__characteristics-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card__characteristics-box-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.card__characteristics-box-label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #282A30;
+  width: 150px;
+}
+.card__characteristics-box-value {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #424551;
+  width: calc(100% - 194px);
 }
 .card__tabs {
   display: flex;
